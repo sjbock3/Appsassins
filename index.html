@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appsassins | Home</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/scrolling-nav.css" />
+  <!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>-->
+  <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,600' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  <link href="css/sitestyle.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/logo.png" sizes="32x32" />
+  <!--<link rel="icon" type="image/png" href="img/logo.png" sizes="16x16" />-->
+  <link rel="stylesheet" type="text/css" href="sweetalert/dist/sweetalert.css">
+  <script src="sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content customModal">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-login" id="loginSelect">Login</button>
+            <button type="button" class="btn btn-login btn-login-inactive text-center" id="registerSelect">Register</button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <form class="form-signin" id="loginForm">
+            <h2 class="form-signin-heading">Sign in</h2>
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input type="email" class="form-control " id="inputEmail" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+            <div class="checkbox">
+              <label>
+                <input id="remember" type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="btn btn-lg btn-wumbo-red btn-block" type="button" id="submit">Sign in</button>
+          </form>
+
+          <form class="form-signin signin-inactive" id="registerForm">
+            <h2 class="form-signin-heading">Register</h2>
+            <label for="fName" class="sr-only">First Name</label>
+            <input type="text" class="form-control " id="fName" placeholder="First Name" required autofocus>
+            <label for="lName" class="sr-only">Last Name</label>
+            <input type="text" class="form-control " id="lName" placeholder="Last Name" required autofocus>
+            <label for="registerEmail" class="sr-only">Email</label>
+            <input type="email" class="form-control " id="registerEmail" placeholder="Email address" required autofocus>
+            <label for="registerPassword" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+            <button class="btn btn-lg btn-wumbo-red btn-block" type="button" id="registerSubmit">Sign up</button>
+          </form>
+
+        </div>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn btn-wumbo-red" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mainpagecontainer">
+    <nav class="navbar navbar-default mainpagenavbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand titleFont" href="index.html">Appsassins</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll" href="#downloadArea">DOWNLOADS</a></li>
+            <li><a class="page-scroll" href="#aboutUsArea">ABOUT US</a></li>
+			      <li><a class="page-scroll" href="techdocs.html">TECHNICAL DOCS</a></li>
+            <li><a class="page-scroll" href="techdocs.html#developmentArea">DEVELOPMENT</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#loginModal" id="loginButton">LOGIN</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="text-center" id="titleText">
+      <img src="img/logo.png" class="mainLogo">
+      <div class = "titleFont" id="titleHeader">Appsassins</div>
+      <div id="appDescript">The new way to play Assassins</div>
+    </div>
+  </div>
+  <div class="container" id="frontPageDetails">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-sm-6 text-center animateEntrance">
+        <img class="mockup" src="img/AndroidMockup.png">
+        <div class="text-center mockup-exp">
+          <h3>Makes Tagging Easy</h3>
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-md-6 col-sm-6 text-center animateEntrance">
+        <img class="mockup" src="img/DownloadPhone.png">
+        <div class="text-center mockup-exp">
+          <h3>Available on the Play Store</h3>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="container-fluid" id="downloadArea">
+    <div class="text-center">
+      <h2 class="titleFont">Download Now</h2>
+      <div class="row vertical-align">>
+          <div class="col-xs-12 col-md-6 col-sm-6 text-center animateEntrance">
+            <img class="mockup" src="img/homemockup.png">
+          </div>
+          <div class="col-xs-12 col-md-6 col-sm-6 text-center animateEntrance" id="googlePlayButton">
+            <a href="https://play.google.com/apps/testing/teamrocket.appsassins">
+                <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" id="aboutUsArea">
+    <div class="text-center">
+      <h2 class="titleFont">About Us</h2>
+    </div>
+    <div class="text-center">
+      <h3>Appsassins is a modern, advanced version of the classic game Assassins. With the assistance of Appsassins, players will have a whole new experience while playing Assassins.</h3>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 text-center animateEntrance">
+        <div class="thumbnail" id="danh">
+            <div class="caption">
+                <h3>Danh Nguyen<br>
+                    <small>Project Manager<br>GUI Developer</small>
+                </h3>
+                <p><a href="mailto:danhn@smu.edu">danhn&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/danh.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 text-center animateEntrance" id="spencer">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Spencer Clapes<br>
+                    <small>Website Manager <br> GUI Developer</small>
+                </h3>
+                <p><a href="mailto:sclapes@smu.edu">sclapes&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/spencer1crop.jpg" alt="">
+
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 text-center animateEntrance" id="nick">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Nicholas Roberts<br>
+                    <small>Android Manager</small>
+                    <small><br>GUI Developer</small>
+                </h3>
+                <p><a href="mailto:robertsn@smu.edu">robertsn&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/nickcrop.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 text-center animateEntrance" id="steven">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Steven Bock<br>
+                    <small>GUI Developer</small>
+                </h3>
+                <p><a href="mailto:sbock@smu.edu">sbock&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/stevencrop.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 text-center animateEntrance" id="jd">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>John Francis<br>
+                    <small>Database Developer</small>
+                </h3>
+                <p><a href="mailto:jdfrancis@smu.edu">jdfrancis&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/jdcrop.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 text-center animateEntrance" id="caleb">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Caleb Kyle<br>
+                    <small>Database Developer</small>
+                </h3>
+                <p><a href="mailto:ckyle@smu.edu">ckyle&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/calebcrop.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-sm-4 col-md-offset-4 text-center animateEntrance" id="joshColumn">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Josh Thomas<br>
+                    <small>Database Developer</small>
+                </h3>
+                <p><a href="mailto:jrthomas@smu.edu">jrthomas&#64;smu.edu</a></p>
+            </div>
+            <img class="img-responsive" src="img/joshcrop.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="text-center animateEntrance">
+        <div class="inspiration">
+            <h3>Appsassins was created by the group of us developers who have all enjoyed playing the game of assassins. Although we all had a great time playing the classic version of assassins, we noticed a couple major flaws. First, the gamemaster has an extremely tough job keeping track of the players. Second, there are often conflicts about whether or not a player was actually tagged. We decided to create an Android and Web-based application to assist the gamemaker and the players to help promote a better, smoother playing experience of the classic game assassins</h3>
+        </div>
+    </div>
+      <!--
+                <ul class="list-inline">
+                    <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+                    <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
+                    <li><a href="#"><i class="fa fa-2x fa-envelope-square"></i></a>
+                </ul>
+-->
+
+    </div>
+  </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="js/login.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/cookies.js"></script>
+
+
+</html>

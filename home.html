@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appsassins | Home</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="sweetalert/dist/sweetalert.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/scrolling-nav.css" />
+<!--  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>-->
+  <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+  <link href="css/home.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+  <!--Create Game Modal-->
+  <div class="md-modal md-effect-10" id="creator">
+        <div class="md-content">
+          <div class="modal-preheader"><button type="button" class="btn md-close" data-dismiss="modal">&times;</button></div>
+          <div class="modal-header">
+            <h3 class="modal-title">Go On, Be Game Master</h3>
+          </div>
+          <div class="modal-body">
+            <label for="gameName">Game Name</label>
+            <input type="text" class="form-control" id="gameName" placeholder="New Game" required autofocus>
+            <br>
+            <label for="inputFriends">Add Friends' Emails</label>
+            <input type="text" class="form-control" id="inputFriends" placeholder="Type emails separated by semicolons" required>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn md-close btn-wumbo-red" data-dismiss="modal" id="beginGame">Begin Game</button>
+          </div>
+        </div>
+    </div>
+
+    <!--see fwends modal -->
+    <div class="md-modal md-effect-10" id="friends">
+          <div class="md-content">
+            <div class="modal-preheader"><button type="button" class="btn md-close" data-dismiss="modal">&times;</button></div>
+            <div class="modal-header">
+              <h3 class="modal-title">Get Connected!</h3>
+            </div>
+            <div class="modal-body">
+              <label for="inputFriends">Invite Friends</label>
+              <input type="text" class="form-control" id="inviteFriends" placeholder="Type emails separated by semicolons">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn md-close btn-wumbo-red" data-dismiss="modal" id="submitFriends">Submit</button>
+            </div>
+          </div>
+      </div>
+
+  <!--Generate targets modal-->
+  <div class="md-modal md-effect-10" id="targets">
+        <div class="md-content">
+          <div class="modal-preheader"><button type="button" class="btn md-close" data-dismiss="modal">&times;</button></div>
+          <div class="modal-header">
+            <h3 class="modal-title">Pre-generated Targets:</h3>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn md-close btn-wumbo-red" data-dismiss="modal" id="startGame">Start Game</button>
+          </div>
+        </div>
+    </div>
+
+  <nav class="navbar navbar-default mainpagenavbar">
+    <div class="mainpagecontainer">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Appsassins</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a id="profileButton" href="#">Hello,</a></li>
+          <li><a href="#"><span class='glyphicon glyphicon-bell'></span></a></li>
+          <li><a href='#' id='moresettings'><span class='glyphicon glyphicon-menu-hamburger'></span></a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- Right Sidebar -->
+  <div class="col-sm-3 col-md-2 sidebar" id='rightsidebar'>
+    <h4 class="sidebar-title">Settings</h4>
+    <hr>
+    <ul class="nav nav-sidebar">
+      <li class="active"><a href="#" id="callStatistics">Current Game Statistics<span class="sr-only">(current)</span></a></li>
+      <li><a href="#" data-toggle="modal" class="md-trigger" data-modal="creator" onclick="dismissRight()">Create A New Game</a></li>
+      <li><a href="#" class="md-trigger" data-toggle="modal" data-modal="friends" onclick="dismissRight()">See Friends</a></li>
+      <li><a href="#" id='logoutButton'>Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Left Sidebar-->
+  <div class="col-sm-3 col-md-2 sidebar" id='gamesidebar'>
+    <h4 class="sidebar-title">Current Game Statistics <button type="button" class="close" onclick="dismissLeft()">&times;</button></h4>
+    <hr>
+    <ul class="nav nav-sidebar">
+      <li class="active"> <a href="#" id="callHeat">View Heat Map</a></li>
+      <li><a href="#" data-toggle="modal" class="md-trigger" data-modal="targets" id="generator">View/Generate Targets</a></li>
+      <li><a id="gStatus">Game Status: Waiting on Start</a></li>
+    </ul>
+    <hr>
+    <h4 class="sidebar-title">Players List</h4>
+    <ul class="nav nav-sidebar" id="players">
+    </ul>
+  </div>
+
+  <div id="map"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/home.js"></script>
+<script src="js/cookies.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrV8kt32p4ZBkX1dw-mjpdPBxzDuAfMao&libraries=visualization"></script>
+<!--modal effects-->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/modalEffects.js"></script>
+
+<!-- for the blur effect -->
+<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+<script src="js/cssParser.js"></script>
+<script>
+		// this is important for IEs
+		var polyfilter_scriptpath = '/js/';
+</script>
+</html>

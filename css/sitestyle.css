@@ -1,0 +1,296 @@
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background: #f5f5f5;
+}
+
+.navbar-default .navbar-brand{
+
+  color: white;
+  background-color:#9E332D;
+  border-radius: 0px 0px 20px 0px;
+  transform: scalex(1.25);
+  transition:all 0.4s;
+}
+
+
+.titleFont {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.navbar-default .navbar-brand:hover, #technav:hover {
+  color: #9E332D;
+  background-color:white;
+}
+#technav {
+  color:white;
+  background-color:#0f0f0f;
+  height:65px;
+}
+.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:focus {
+    color: #e0e0e0;
+    transition: all 0.2s;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color:white;
+}
+#navbar > ul > li:hover::after
+{
+  background:#AB2A23;
+  opacity:1;
+  transform:translateY(0px)
+}  
+#navbar > ul > li:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.3s;
+  transition: opacity 0.5s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+ }
+
+
+.mainpagenavbar {
+    background: #0f0f0f;
+    border: 0;
+    margin-bottom:0;
+    padding: 0;
+
+}
+
+
+
+.navbar-right {
+    font-family: 'Maven Pro';
+    font-weight: 600;
+}
+   
+.container-fluid {
+  padding:0;
+}
+.mainpagecontainer {
+    height: 30em;
+    background: #0F0F0F;
+}
+.mainLogo {
+    width: 5em;
+}
+.mockup {
+  max-width: 30em;
+  padding-bottom: .5em;
+}
+.mockup-exp {
+  padding-bottom: 3em;
+}
+
+#titleText {
+    color: #f5f5f5;
+    margin-top: 8em;
+}
+
+#titleHeader {
+     font-size: 6.2em;
+}
+#appDescript {
+    font-size: 2em;
+    font-family:"Fjalla One";
+    color:#141414;
+}
+
+#frontPageDetails {
+    margin-top: 10%;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+#downloadArea {
+  background-color: #9E332D;
+  color: white;
+  padding-bottom: 5em;
+
+}
+#downloadArea h2 {
+  padding-bottom: 3em;
+}
+
+#aboutUsArea {
+    background-color: #f5f5f5;
+    padding-bottom: 5em;
+}
+#aboutUsArea h2 {
+    padding-bottom: .5em;
+    color: black;
+}
+#aboutUsArea h3 {
+    padding-bottom: .5em;
+    color: black;
+}
+
+#aboutUsArea .inspiration {
+    margin-top: 54em;
+    padding-left:15%;
+    padding-right:15%;
+    width:100%;
+}
+
+#technicalArea {
+  background-color: #9E332D;
+  color: white;
+  padding-bottom: 5em;
+}
+#technicalArea h2 {
+  padding-bottom: 1em;
+}
+#technicalArea div {
+  font-size: 125%;
+  font-weight: 300;
+}
+
+
+#developmentArea {
+  background-color: #f5f5f5;
+  color: black;
+  padding-bottom: 10em;
+}
+
+.btn-wumbo-red, btn-wumbo-red:focus {
+    background: #9E332D;
+    color: white;
+    border-radius: 0;
+}
+.btn-wumbo-red:hover {
+    background: white;
+    color: #9E332D;
+}
+
+.customModal {
+  background: black;
+  color: white;
+
+}
+.form-signin input {
+  background: black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  color: white;
+
+}
+.form-signin input:focus {
+  border: 1px solid #9E332D;
+  color: white;
+
+}
+.form-signin input::-webkit-input-placeholder {
+  color: white;
+}
+
+.form-signin .btn-wumbo-red {
+  margin-top: 1em;
+}
+
+.btn-login{
+  color: white;
+  font-size: 2em;
+  background-color: #9E332D;
+  border-radius: 0;
+  width: 10em;
+  padding: .5em 1.5em;
+  text-align: center;
+}
+.btn-login:focus {
+  color: white;
+}
+.btn-login:hover {
+  color: #9E332D;
+  background: white;
+}
+
+.btn-login-inactive {
+  background-color: grey;
+
+}
+
+.signin-inactive {
+  display: none;
+}
+
+.text-center {
+  text-align:center;
+}
+
+.mockup2 {
+  padding-top: 60px;
+}
+
+#techHeader {
+    background-color: white;
+    color: #9E332D;
+    height: 3em;
+}
+
+#techBody {
+    background-color: white;
+    color: black;
+    height: 5em;
+}
+
+#techBody a {
+    color: black;
+}
+
+#pheader {
+    background-color: #9E332D;
+    color: white;
+    height: 7em;
+}
+
+#devBody {
+    height: 40em;
+}
+
+
+.caption {
+  opacity: 0;
+  position: absolute;
+  width: 220px;
+  height: 200px;
+  margin-left: 19%;
+  margin-right: 25%;
+}
+
+.thumbnail .img-responsive{
+  transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
+.thumbnail:hover .img-responsive{
+  opacity: 0.1;
+}
+
+.thumbnail:hover .caption{
+  opacity: 1;
+}
+
+.col-md-4 {
+  position: relative;
+}
+
+
+.animateEntrance {
+  -webkit-transition: all 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition:         all 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity:0;
+  transform: translateY(40%);
+}

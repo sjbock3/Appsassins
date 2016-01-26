@@ -1,0 +1,146 @@
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background: #f5f5f5;
+}
+
+.navbar-default .navbar-brand{
+  color: white;
+
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #9E332D;
+
+}
+.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:focus {
+    color: white;
+}
+
+.navbar-default .navbar-nav li a:hover {
+    color: black;
+    background: #9E332D;
+    transition-duration: 0.2s;
+
+}
+
+
+.mainpagenavbar {
+    background: 0;
+    border: 0;
+    background-color: black;
+    margin-bottom:0;
+    padding: 0;
+
+}
+
+
+.mainpagecontainer {
+    /*height: 30em;*/
+    background: #0F0F0F;
+}
+
+#titleText {
+    color: #f5f5f5;
+    margin-top: 8em;
+}
+
+#titleHeader {
+     font-size: 2.5em;
+}
+#appDescript {
+    font-size: 1em;
+}
+
+#frontPageDetails {
+    margin-top: 3em;
+}
+
+.btn-wumbo-red, btn-wumbo-red:focus, .md-close {
+    background: #9E332D;
+    color: white
+}
+.btn-wumbo-red:hover, .md-close:hover {
+    background: white;
+    color: #9E332D;
+
+}
+
+#map {
+  height: 93%;
+  width: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+  height: 93%;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+}
+
+#rightsidebar {
+  margin-left: 83.35%;
+  display: none;
+  text-align: center;
+}
+
+#gamesidebar li, #rightsidebar li {
+  color: white;
+}
+
+#gamesidebar a, #rightsidebar a {
+  color: white;
+}
+
+#gamesidebar a:hover, #rightsidebar a:hover {
+  color: black;
+  background: #9E332D;
+  transition-duration: 0.2s;
+}
+
+#gamesidebar a:focus, #rightsidebar a:focus {
+  color: black;
+  background: #9E332D;
+  transition-duration: 0.2s;
+}
+
+.sidebar-title {
+    color:#9E332D;
+}
+
+.sidebar-title .close {
+  color:white;
+}
+
+.md-modal .md-content {
+  background-color: black;
+  color: white;
+}
+
+.modal-header, #gamesidebar{
+  text-align: center;
+}
+
+.close:focus, .close:hover {
+  color: white;
+}
+
+.modal-preheader {
+  text-align:right;
+}
+
+input.form-control {
+  color:black;
+}
+
+.glyphicon-remove-sign {
+  color: #9D9D9D;
+}
+
+.modal-body {
+  text-align: center;
+}

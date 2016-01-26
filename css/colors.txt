@@ -1,0 +1,7 @@
+provisional color pallette
+
+#0F0F0F
+#303030
+#B54500
+#9E332D
+#BFBFBF
